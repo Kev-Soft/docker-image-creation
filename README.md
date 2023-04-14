@@ -71,7 +71,7 @@ nano index.html
 ```
 
 
-2.create a file called Dockerfile
+3.create a file called "Dockerfile"
 ```
 #get base image
 FROM nginx
@@ -79,7 +79,30 @@ FROM nginx
 LABEL org.opencontainers.image.authors="https://github.com/Kev-Soft/"
 
 RUN apt-get update && apt-get upgrade -y
+
 #copy all website files - in this case we use index.html
 COPY index.html /usr/share/nginx/html/index.html
+
 EXPOSE 8080
+```
+
+4.build docker image and tag it - 
+```
+docker build -t webserver:v1 .
+
+#make sure to edit it to you dockerhub-rep
+#example: docker tag webserver:v1 your-dockerhub-rep/webserver:v1
+
+docker tag webserver:v1 dothavoc/webserver:v1
+```
+
+5.push it to docker hub
+```
+docker login
+docker push dothavoc/webserver:v1
+```
+
+6. pull and run it
+```
+docker pull dothavoc/webserver:v1
 ```
