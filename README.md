@@ -45,7 +45,7 @@ more on: official [Docker documentation](https://docs.docker.com/engine/install/
 
 
 
-## lets get started with docker
+## Lets get started with docker image creation
 1.create a directory for all you files
 ```
 mkdir webserver
