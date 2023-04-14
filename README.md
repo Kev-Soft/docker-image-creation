@@ -105,4 +105,5 @@ docker push dothavoc/webserver:v1
 6. pull and run it
 ```
 docker pull dothavoc/webserver:v1
+docker run dothavoc/webserver:v1
 ```
