@@ -74,8 +74,8 @@ nano index.html
 
 
 3.create a file called "Dockerfile"<br/>
--paste i the given code
--dont forget to change path to you folder which cointains your website files or just use the given index.html
+-paste in the given code <br/>
+-dont forget to change path to your folder which cointains your website files or just use the given index.html
 
 ```docker
 #get base image
